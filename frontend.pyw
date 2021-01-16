@@ -129,7 +129,7 @@ class GUI():
 
 
     def weatherrn(self):
-        r = requests.get(url='http://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=api key')
+        r = requests.get(url='http://api.openweathermap.org/data/2.5/weather?q=#LOCATION#&appid=api key')
         fulljson = r.json()
         weather_json = fulljson['weather']
         self.condition=weather_json[0]['main']
